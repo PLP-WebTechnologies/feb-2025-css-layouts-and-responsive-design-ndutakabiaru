@@ -1,0 +1,130 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4e0239; /* Light gray background */
+    color: #333; /* Dark gray text */
+}
+
+/* Header and Navigation Bar */
+header {
+    background-color:bisque; /* Gray header */
+    color: rgb(138, 7, 79);
+    padding: 10px 0; /* Space above and below */
+}
+
+.nav-bar {
+    display: flex; /* Arrange items in a row */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Space on the sides */
+}
+
+.nav-bar ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    display: flex; /* Arrange links in a row */
+}
+
+.nav-bar ul li {
+    margin-left: 15px; /* Space between links */
+}
+
+.nav-bar a {
+    color: rgb(14, 81, 129);
+    text-decoration: none; /* Remove underlines */
+}
+
+.site-name {
+    font-size: 1.2em; /* Slightly bigger text */
+    font-weight: bold; /* Make it bold */
+}
+
+/* Main Content Area (Using Flexbox) */
+.main-area {
+    display: flex; /* Arrange main content and sidebar in a row */
+    max-width: 960px; /* Limit the width */
+    margin: 20px auto; /* Space above and below, center horizontally */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc; /* Light gray border */
+}
+
+.main-content {
+    flex: 2; /* Takes up more of the row */
+    padding-right: 20px; /* Space to the right */
+}
+
+.side-stuff {
+    flex: 1; /* Takes up less of the row */
+    padding-left: 20px; /* Space to the left */
+    background-color: #f9f9f9; /* Light background */
+    border-left: 1px solid #eee; /* Light gray line */
+}
+
+.side-stuff h3 {
+    margin-top: 0; /* Remove top space */
+}
+
+.side-stuff ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-stuff li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Center the text */
+    padding: 10px 0;
+    background-color: #c70a0a;
+    color: white;
+    width: 100%; /* Full width */
+}
+
+/* Responsive Design for Small Screens (like phones) */
+@media (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    .nav-bar ul {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Make links take full width */
+        margin-top: 10px;
+    }
+
+    .nav-bar ul li {
+        margin: 5px 0; /* Small space above and below links */
+        text-align: center; /* Center the text in links */
+    }
+
+    .main-area {
+        flex-direction: column; /* Stack main content and sidebar vertically */
+    }
+
+    .main-content {
+        padding-right: 0; /* Remove right space */
+        margin-bottom: 15px; /* Space below main content */
+    }
+
+    .side-stuff {
+        padding-left: 0; /* Remove left space */
+        border-left: none; /* Remove left border */
+        border-top: 1px solid #eee; /* Add top border */
+    }
+}
+
+/* Responsive Design for Medium Screens (like tablets) */
+@media (min-width: 601px) and (max-width: 960px) {
+    /* Adjustments for tablets can go here if needed */
+    .main-area {
+        /* Keep sidebar to the right */
+        flex-direction: row;
+    }
+}
+
+/* Larger screens will use the default styles */
